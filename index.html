@@ -606,7 +606,7 @@
 
     .works {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: clamp(16px, 2vw, 28px);
     }
 
@@ -2196,6 +2196,124 @@
       font-size: 12px;
     }
 
+    /* thumb art: netwatch */
+    .t-net {
+      background: radial-gradient(80% 70% at 85% 95%, rgba(228, 23, 44, .28), transparent 62%), #0c0d10;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 12px;
+    }
+
+    .t-net .nside {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #0a0b0e;
+      padding: 10px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font: 400 8.5px var(--mono);
+      letter-spacing: .06em;
+      color: var(--dim);
+      text-transform: uppercase;
+    }
+
+    .t-net .nside b {
+      font: 500 8.5px var(--mono);
+      color: var(--red-hi);
+      letter-spacing: .1em;
+      margin-bottom: 2px;
+    }
+
+    .t-net .nside span.on {
+      color: var(--ink);
+      border-left: 2px solid var(--red);
+      padding-left: 5px;
+      margin-left: -7px;
+    }
+
+    .t-net .nmain {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .t-net .ncards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .t-net .ncards div {
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: #0a0b0e;
+      padding: 6px 8px;
+      font: 400 7.5px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--mute);
+    }
+
+    .t-net .ncards div b {
+      display: block;
+      font: 400 20px/1.1 var(--display);
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+
+    .t-net .ncards div.hot b {
+      color: var(--red-hi);
+    }
+
+    .t-net svg {
+      width: 100%;
+      height: 38px;
+      display: block;
+    }
+
+    .t-net .nalerts {
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: #0a0b0e;
+      overflow: hidden;
+      font: 400 8.5px/1 var(--mono);
+      color: #b9b7bf;
+    }
+
+    .t-net .nalerts div {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 8px;
+      padding: 7px 8px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .t-net .nalerts div:last-child {
+      border-bottom: 0;
+    }
+
+    .t-net .nalerts em {
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .t-net .hi {
+      color: var(--red-hi);
+    }
+
+    .t-net .md {
+      color: #ffd166;
+    }
+
+    .t-net .lo {
+      color: #6fe3a4;
+    }
+
     /* responsive */
     @media (max-width: 1020px) {
       .works {
@@ -2383,7 +2501,7 @@
           </div>
           <div class="stats">
             <div class="stat"><b data-count="2">2</b><span>Cyber security internships</span></div>
-            <div class="stat"><b data-count="3">3</b><span>Security projects built</span></div>
+            <div class="stat"><b data-count="4">4</b><span>Security projects built</span></div>
             <div class="stat"><b data-count="13" data-suffix="+">13+</b><span>Signals in PhishAlert's trust score</span>
             </div>
           </div>
@@ -2396,14 +2514,14 @@
     <div class="marq" aria-label="Tools and technologies">
       <div class="track"><span class="f">Kali Linux</span><span>Metasploit</span><span class="f">Burp
           Suite</span><span>Wireshark</span><span class="f">Nmap</span><span>Parrot OS</span><span
-          class="f">Python</span><span>Scikit-learn</span><span class="f">Kali Linux</span><span>Metasploit</span><span
+          class="f">Python</span><span>Scikit-learn</span><span class="f">Java</span><span>MySQL</span><span class="f">Kali Linux</span><span>Metasploit</span><span
           class="f">Burp Suite</span><span>Wireshark</span><span class="f">Nmap</span><span>Parrot OS</span><span
-          class="f">Python</span><span>Scikit-learn</span></div>
+          class="f">Python</span><span>Scikit-learn</span><span class="f">Java</span><span>MySQL</span></div>
       <div class="track rev"><span>JavaScript</span><span class="f">Chrome MV3</span><span>Groq API</span><span
           class="f">Pandas</span><span>NumPy</span><span class="f">VirtualBox</span><span>VMware</span><span
-          class="f">Matplotlib</span><span>JavaScript</span><span class="f">Chrome MV3</span><span>Groq API</span><span
+          class="f">Matplotlib</span><span class="f">Swing</span><span>JDBC</span><span>JavaScript</span><span class="f">Chrome MV3</span><span>Groq API</span><span
           class="f">Pandas</span><span>NumPy</span><span class="f">VirtualBox</span><span>VMware</span><span
-          class="f">Matplotlib</span></div>
+          class="f">Matplotlib</span><span class="f">Swing</span><span>JDBC</span></div>
     </div>
 
     <section class="pad" id="work">
@@ -2420,6 +2538,7 @@
           <button class="tab" role="tab" aria-selected="false" data-f="ext">Extension</button>
           <button class="tab" role="tab" aria-selected="false" data-f="ml">Machine learning</button>
           <button class="tab" role="tab" aria-selected="false" data-f="tool">Tooling</button>
+          <button class="tab" role="tab" aria-selected="false" data-f="app">Desktop app</button>
         </div>
         <div class="works">
           <article class="work rv" data-cat="ext">
@@ -2516,6 +2635,39 @@ scanning 127.0.0.1 ...
               <li>Written up as the internship project report at Engineers World Limited.</li>
             </ul>
             <span class="wsub">Python · Networking · Cryptography basics</span>
+          </article>
+          <article class="work rv" data-cat="app">
+            <div class="thumb t-net">
+              <div class="nside" aria-hidden="true"><b>NetWatch</b><span class="on">Dashboard</span><span>Live</span><span>Alerts</span><span>Network</span><span>Ports</span><span>History</span></div>
+              <div class="nmain" aria-hidden="true">
+                <div class="ncards">
+                  <div>Connections<b>142</b></div>
+                  <div class="hot">Alerts<b>3</b></div>
+                  <div>Status<b>LIVE</b></div>
+                </div>
+                <svg viewBox="0 0 200 38" preserveAspectRatio="none">
+                  <polyline fill="none" stroke="#e4172c" stroke-width="1.6" points="0,28 14,24 28,26 42,18 56,21 70,12 84,16 98,10 112,19 126,14 140,22 154,9 168,15 182,11 200,13" />
+                  <polyline fill="rgba(228,23,44,.12)" stroke="none" points="0,38 0,28 14,24 28,26 42,18 56,21 70,12 84,16 98,10 112,19 126,14 140,22 154,9 168,15 182,11 200,13 200,38" />
+                </svg>
+                <div class="nalerts">
+                  <div><em class="hi">HIGH</em><span>BLOCKLIST_MATCH · 185.220.101.0:443</span></div>
+                  <div><em class="md">MED</em><span>UNEXPECTED_LISTENER · port 8888</span></div>
+                  <div><em class="lo">LOW</em><span>REPEATED_ENDPOINT · 10 observations</span></div>
+                </div>
+              </div>
+              <span class="sample">Illustration</span>
+            </div>
+            <div class="wmeta"><span class="wnum">04</span>
+              <h3 class="wtitle">NetWatch</h3><span class="wsub">Network monitoring &amp; threat detection · 2026</span>
+            </div>
+            <ul>
+              <li>Java desktop app that polls live TCP connections on Windows every few seconds, runs them through a
+                rule engine (blocklisted IPs, unexpected listening ports, repeated endpoints) and raises severity-rated
+                alerts in a real-time dashboard.</li>
+              <li>Layered Swing / JDBC / MySQL design with session-based history, LAN device discovery, a multi-threaded
+                port checker, alert triage and CSV export. It keeps monitoring even when the database is offline.</li>
+            </ul>
+            <span class="wsub">Java 17 · Swing · JDBC · MySQL · Multithreading</span>
           </article>
         </div>
       </div>
@@ -2716,7 +2868,7 @@ scanning 127.0.0.1 ...
             </div>
             <div class="blk">
               <h4>Focus areas</h4>
-              <div class="pills"><span>Phishing analysis</span><span>Networking fundamentals</span><span>Ethical hacking
+              <div class="pills"><span>Phishing analysis</span><span>Networking fundamentals</span><span>Network monitoring</span><span>Ethical hacking
                   basics</span><span>Digital forensics</span><span>Threat analysis</span></div>
             </div>
             <div class="blk">
